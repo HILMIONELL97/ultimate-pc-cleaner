@@ -1,0 +1,71 @@
+{
+    "name": "ultimate-pc-cleaner",
+    "productName": "ultimate-pc-cleaner",
+    "version": "1.0.0",
+    "description": "My Electron application",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish",
+        "rm": "node src/fs.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HILMIONELL97/ultimate-pc-cleaner.git"
+    },
+    "keywords": [
+        "electron"
+    ],
+    "author": {
+        "name": "HILMI ONELL",
+        "email": "57817028+HILMIONELL97@users.noreply.github.com"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/HILMIONELL97/ultimate-pc-cleaner/issues"
+    },
+    "homepage": "https://github.com/HILMIONELL97/ultimate-pc-cleaner#readme",
+    "devDependencies": {
+        "@electron-forge/cli": "^6.0.0-beta.54",
+        "@electron-forge/maker-deb": "^6.0.0-beta.54",
+        "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+        "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+        "@electron-forge/maker-zip": "^6.0.0-beta.54",
+        "electron": "^11.2.2"
+    },
+    "dependencies": {
+        "electron-reload": "^1.5.0",
+        "electron-squirrel-startup": "^1.0.0",
+        "nodemon": "^2.0.7",
+        "shelljs": "^0.8.4"
+    },
+    "config": {
+        "forge": {
+            "packagerConfig": {},
+            "makers": [{
+                    "name": "@electron-forge/maker-squirrel",
+                    "config": {
+                        "name": "ultimate-pc-cleaner"
+                    }
+                },
+                {
+                    "name": "@electron-forge/maker-zip",
+                    "platforms": [
+                        "darwin"
+                    ]
+                },
+                {
+                    "name": "@electron-forge/maker-deb",
+                    "config": {}
+                },
+                {
+                    "name": "@electron-forge/maker-rpm",
+                    "config": {}
+                }
+            ]
+        }
+    }
+
+}
